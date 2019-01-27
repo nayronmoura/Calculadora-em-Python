@@ -1,0 +1,74 @@
+import time
+import math
+import pygame
+
+pygame.mixer.music.load(musica.mp3)
+pygame.mixer.music.play()
+def menu():
+    print('')
+
+
+print('-=' * 20)
+print('-=' * 7, '{}Bem-Vindo{}'.format('\033[7;36;40m', '\033[m'), '-=' * 7)
+print('-=' * 20)
+print('-' * 5, '{}by nayron gabriel{}'.format('\033[4;36;40m', '\033[m'), '-' * 5)
+
+time.sleep(1)
+
+print('''            _______________________________
+           |                               |
+           |<1>  para Soma                 |
+           |<2>  para Subtração            |
+           |<3>  para Divisão              |
+           |<4>  para Multiplicação        |
+           |<5>  para Potenciaçao          |
+           |<6>  para Raiz quadrada        | 
+           |<7>  para seno,coseno,tangente |  
+           |_______________________________| ''')
+
+sinal = int(input('qual operaçao você deseja ?'))
+
+def soma():
+    print('')
+
+
+if sinal == 1:
+    n1 = int(input('qual o primeiro numero? '))
+    n2 = int(input('qual o segundo numero? '))
+    print('o resultado e {}'.format(n1 + n2))
+
+elif sinal == 2:
+    n1 = int(input('qual o primeiro numero?  '))
+    n2 = int(input('qual o segundo numero?  '))
+    print('o resultado e {}'.format(n1 - n2))
+
+elif sinal == 3:
+    n1 = int(input('qual o primeiro numero?  '))
+    n2 = int(input('qual o segundo numero?  '))
+    print('o resultado e {}'.format(n1 / n2))
+
+
+elif sinal == 4:
+    n1 = int(input('qual o primeiro numero?  '))
+    n2 = int(input('qual o segundo numero?  '))
+    print('o resultado e {}'.format(n1 * n2))
+
+
+elif sinal == 5:
+    n1 = int(input('qual o numero?  '))
+    n2 = int(input('quer elevar a quanto ??  '))
+    print('o resultado e {}'.format(n1 ** n2))
+
+
+elif sinal == 6:
+    n1 = int(input('qual o numero que quer a raiz?  '))
+    print('o resultado e {}'.format(math.sqrt(n1)))
+
+elif sinal == 7:
+    n1 = int(input('qual o angulo?  '))
+    print('o seno e {:.2f}'.format(math.sin(n1)))
+    print('o cosseno e {:.2f}'.format(math.cos(n1)))
+    print('o tangente e {:.2f}'.format(math.tan(n1)))
+
+
+print('\033[1;33mby: furiaotaku')
