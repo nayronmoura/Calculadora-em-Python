@@ -1,16 +1,15 @@
+#imports
 import time
 import math
 
 
-
+#Método de Menu
 def menu():
     print('')
     print('-=' * 20)
     print('-=' * 7, '{}Bem-Vindo{}'.format('\033[7;36;40m', '\033[m'), '-=' * 7)
     print('-=' * 20)
     print('-' * 5, '{}by Nayron Gabriel{}'.format('\033[4;36;40m', '\033[m'), '-' * 5)
-
-    time.sleep(1)
 
     print('''            _______________________________
            |                               |
@@ -25,39 +24,42 @@ def menu():
            |_______________________________| ''')
 
     sinal = int(input('Qual operaçao você deseja ?'))
-    opr(sinal)
+    sleep(1)
+    operacoes(sinal)
 
-
-def opr(sinal):
+#Operações matemáticas
+def operacoes(sinal):
+    #adição
     if sinal == 1:
         n1 = int(input('Qual o primeiro número? '))
         n2 = int(input('Qual o segundo número? '))
         print('o resultado e {}'.format(n1 + n2))
-
+    #subtração
     elif sinal == 2:
         n1 = int(input('Qual o primeiro número?  '))
         n2 = int(input('Qual o segundo número?  '))
         print('o resultado e {}'.format(n1 - n2))
-
+    #divisão
     elif sinal == 3:
         n1 = int(input('Qual o primeiro numero?  '))
         n2 = int(input('Qual o segundo numero?  '))
         print('O resultado e {}'.format(n1 / n2))
-
+    #multiplicação
     elif sinal == 4:
         n1 = int(input('Qual o primeiro número?  '))
         n2 = int(input('Qual o segundo número?  '))
         print('o resultado e {}'.format(n1 * n2))
-
+    #potenciação
     elif sinal == 5:
         n1 = int(input('Qual o número?  '))
         n2 = int(input('Quer elevar a quanto ??  '))
         print('o resultado e {}'.format(n1 ** n2))
-
+    #radiciação
     elif sinal == 6:
         n1 = int(input('Qual o número que quer a raiz?  '))
         print('o resultado e {}'.format(math.sqrt(n1)))
-
+        
+    #Teorema de pitagoras
     elif sinal == 7:
         n1 = int(input('Qual o angulo?  '))
         print('O seno e {:.2f}'.format(math.sin(n1)))
